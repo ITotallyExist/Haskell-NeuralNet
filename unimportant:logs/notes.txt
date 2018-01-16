@@ -1,0 +1,14 @@
+old calculatez
+20.54
+
+new
+18.52
+19.07
+18.65
+
+
+2nd test group
+old calculatez
+
+
+new

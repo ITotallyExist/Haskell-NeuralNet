@@ -1,0 +1,173 @@
+	Tue Dec  5 14:40 2017 Time and Allocation Profiling Report  (Final)
+
+	   profilingTest +RTS -hc -p -RTS
+
+	total time  =       21.63 secs   (21628 ticks @ 1000 us, 1 processor)
+	total alloc = 47,182,977,080 bytes  (excludes profiling overheads)
+
+COST CENTRE                  MODULE    SRC                             %time %alloc
+
+derivateNeuronWeightsandBias NeuralNet NeuralNet.hs:(161,1)-(162,144)   23.9   21.1
+calculateZ                   NeuralNet NeuralNet.hs:(210,1)-(211,97)    20.8   13.0
+averageHelper                NeuralNet NeuralNet.hs:(262,1)-(264,53)    18.1   23.3
+separateFronts               NeuralNet NeuralNet.hs:215:1-40            14.6   25.4
+main                         Main      profilingTest.hs:(2,1)-(6,88)     5.5    5.9
+derivateNeuronActivation     NeuralNet NeuralNet.hs:(156,1)-(157,141)    4.9    3.0
+readPrec                     NeuralNet NeuralNet.hs:8:87-90              2.9    3.0
+showsPrec                    NeuralNet NeuralNet.hs:17:56-59             1.9    2.3
+average                      NeuralNet NeuralNet.hs:259:1-75             1.5    0.9
+averageHelper.prevLen        NeuralNet NeuralNet.hs:263:28-63            1.2    0.0
+updateAttribute              NeuralNet NeuralNet.hs:102:1-81             1.0    0.3
+
+
+                                                                                                                 individual      inherited
+COST CENTRE                            MODULE                  SRC                            no.     entries  %time %alloc   %time %alloc
+
+MAIN                                   MAIN                    <built-in>                     146          0    0.0    0.0   100.0  100.0
+ CAF                                   GHC.Conc.Signal         <entire-module>                238          0    0.0    0.0     0.0    0.0
+ CAF                                   GHC.Float               <entire-module>                231          0    0.0    0.0     0.0    0.0
+ CAF                                   GHC.IO.Encoding         <entire-module>                221          0    0.0    0.0     0.0    0.0
+ CAF                                   GHC.IO.Encoding.Iconv   <entire-module>                219          0    0.0    0.0     0.0    0.0
+ CAF                                   GHC.IO.Exception        <entire-module>                213          0    0.0    0.0     0.0    0.0
+ CAF                                   GHC.IO.FD               <entire-module>                212          0    0.0    0.0     0.0    0.0
+ CAF                                   GHC.IO.Handle.FD        <entire-module>                210          0    0.0    0.0     0.0    0.0
+ CAF                                   GHC.IO.Handle.Internals <entire-module>                209          0    0.0    0.0     0.0    0.0
+ CAF                                   GHC.Read                <entire-module>                196          0    0.0    0.0     0.0    0.0
+ CAF                                   Text.Read.Lex           <entire-module>                174          0    0.0    0.0     0.0    0.0
+ CAF                                   GHC.Integer.Type        <entire-module>                157          0    0.0    0.0     0.0    0.0
+ CAF:$creadListPrec2_r40r              NeuralNet               NeuralNet.hs:17:62-65          276          0    0.0    0.0     0.0    0.0
+  readListPrec                         NeuralNet               NeuralNet.hs:17:62-65          321          1    0.0    0.0     0.0    0.0
+ CAF:$creadListPrec3_r40w              NeuralNet               NeuralNet.hs:27:54-57          281          0    0.0    0.0     0.0    0.0
+  readListPrec                         NeuralNet               NeuralNet.hs:27:54-57          313          1    0.0    0.0     0.0    0.0
+ CAF:$creadPrec1_r40l                  NeuralNet               NeuralNet.hs:8:87-90           270          0    0.0    0.0     0.0    0.0
+  readPrec                             NeuralNet               NeuralNet.hs:8:87-90           328          1    0.0    0.0     0.0    0.0
+ CAF:$creadPrec2_r40q                  NeuralNet               NeuralNet.hs:17:62-65          275          0    0.0    0.0     0.0    0.0
+  readPrec                             NeuralNet               NeuralNet.hs:17:62-65          325          1    0.0    0.0     0.0    0.0
+ CAF:$creadPrec3_r40v                  NeuralNet               NeuralNet.hs:27:54-57          280          0    0.0    0.0     0.0    0.0
+  readPrec                             NeuralNet               NeuralNet.hs:27:54-57          316          1    0.0    0.0     0.0    0.0
+ CAF:$creadPrec_r3Nz                   NeuralNet               NeuralNet.hs:23:82-85          264          0    0.0    0.0     0.0    0.0
+  readPrec                             NeuralNet               NeuralNet.hs:23:82-85          319          1    0.0    0.0     0.0    0.0
+ CAF:$cshowList2_r40E                  NeuralNet               NeuralNet.hs:17:56-59          287          0    0.0    0.0     0.0    0.0
+  showList                             NeuralNet               NeuralNet.hs:17:56-59          338          1    0.0    0.0     0.0    0.0
+ CAF:$cshowList3_r40I                  NeuralNet               NeuralNet.hs:27:48-51          290          0    0.0    0.0     0.0    0.0
+  showList                             NeuralNet               NeuralNet.hs:27:48-51          294          1    0.0    0.0     0.0    0.0
+ CAF:$dRead1_r2Tu                      Main                    <no location info>             260          0    0.0    0.0     0.0    0.0
+ CAF:$dRead1_r40u                      NeuralNet               <no location info>             279          0    0.0    0.0     0.0    0.0
+ CAF:$dRead2_r2Tv                      Main                    <no location info>             261          0    0.0    0.0     0.0    0.0
+ CAF:$dRead_r2Tt                       Main                    <no location info>             259          0    0.0    0.0     0.0    0.0
+ CAF:$dRead_r40p                       NeuralNet               <no location info>             274          0    0.0    0.0     0.0    0.0
+ CAF:$dShow1_r40G                      NeuralNet               <no location info>             289          0    0.0    0.0     0.0    0.0
+ CAF:$dShow_r2T7                       Main                    <no location info>             258          0    0.0    0.0     0.0    0.0
+ CAF:$dShow_r40C                       NeuralNet               <no location info>             286          0    0.0    0.0     0.0    0.0
+ CAF:main                              :Main                   profilingTest.hs:2:1-4         263          0    0.0    0.0     0.0    0.0
+ CAF:main                              Main                    profilingTest.hs:2:1-4         262          0    0.0    0.0     0.0    0.0
+  main                                 Main                    profilingTest.hs:(2,1)-(6,88)  292          1    0.0    0.0     0.0    0.0
+ main                                  Main                    profilingTest.hs:(2,1)-(6,88)  293          0    5.5    5.9   100.0  100.0
+  train                                NeuralNet               NeuralNet.hs:(75,1)-(78,92)    296          1    0.0    0.0    89.7   88.8
+   trainHelper                         NeuralNet               NeuralNet.hs:(81,1)-(83,199)   297         20    0.0    0.0    89.7   88.8
+    trainEpoch                         NeuralNet               NeuralNet.hs:(90,1)-(91,189)   306         20    0.0    0.0    89.7   88.8
+     trainEpochHelper                  NeuralNet               NeuralNet.hs:(106,1)-(109,98)  308        500    0.0    0.0    52.6   40.6
+      item2                            NeuralNet               NeuralNet.hs:114:1-22          343       1500    0.0    0.0     0.0    0.0
+      derivateNet                      NeuralNet               NeuralNet.hs:(126,1)-(127,141) 309        500    0.0    0.0    31.6   27.5
+       derivateNetHelper               NeuralNet               NeuralNet.hs:(130,1)-(136,111) 330       1000    0.0    0.0    31.4   27.2
+        derivateLayer                  NeuralNet               NeuralNet.hs:(141,1)-(145,118) 342      64020    0.0    0.0    28.4   23.8
+         derivateNeuronWeightsandBias  NeuralNet               NeuralNet.hs:(161,1)-(162,144) 356   50240128   21.2   17.9    21.2   17.9
+         derivateLayer.cDAct           NeuralNet               NeuralNet.hs:145:63-118        376      64000    0.0    0.0     4.7    2.8
+          derivateNeuronActivation     NeuralNet               NeuralNet.hs:(156,1)-(157,141) 377    8256000    4.7    2.8     4.7    2.8
+         derivateLayer.x               NeuralNet               NeuralNet.hs:144:63-89         378      64000    0.0    0.0     2.5    3.1
+          separateFronts               NeuralNet               NeuralNet.hs:215:1-40          379      64000    2.5    3.0     2.5    3.0
+        derivateNetHelper.cDacts       NeuralNet               NeuralNet.hs:135:96-110        381        500    0.0    0.0     0.0    0.0
+        derivateNetHelper.cLOut        NeuralNet               NeuralNet.hs:133:96-154        384        500    0.0    0.0     2.9    3.4
+         derivateLayer                 NeuralNet               NeuralNet.hs:(141,1)-(145,118) 385      64020    0.0    0.0     2.9    3.4
+          derivateNeuronWeightsandBias NeuralNet               NeuralNet.hs:(161,1)-(162,144) 412    8256128    2.6    2.9     2.6    2.9
+          derivateLayer.cDAct          NeuralNet               NeuralNet.hs:145:63-118        387      64000    0.0    0.0     0.2    0.2
+           derivateNeuronActivation    NeuralNet               NeuralNet.hs:(156,1)-(157,141) 388     704000    0.2    0.2     0.2    0.2
+          derivateLayer.x              NeuralNet               NeuralNet.hs:144:63-89         389      64000    0.0    0.0     0.2    0.2
+           separateFronts              NeuralNet               NeuralNet.hs:215:1-40          390      64000    0.1    0.2     0.1    0.2
+        derivateNetHelper.cResult      NeuralNet               NeuralNet.hs:136:96-111        411        500    0.0    0.0     0.0    0.0
+        derivateNetHelper.x            NeuralNet               NeuralNet.hs:134:96-119        382        500    0.0    0.0     0.0    0.0
+         separateFronts                NeuralNet               NeuralNet.hs:215:1-40          383        500    0.0    0.0     0.0    0.0
+       derivateNet.x                   NeuralNet               NeuralNet.hs:127:71-141        395        500    0.0    0.0     0.2    0.2
+        derivateLastLayer              NeuralNet               NeuralNet.hs:(150,1)-(152,103) 397       5020    0.0    0.0     0.2    0.2
+         derivateNeuronWeightsandBias  NeuralNet               NeuralNet.hs:(161,1)-(162,144) 413     645010    0.2    0.2     0.2    0.2
+         derivateLastLayer.cDact       NeuralNet               NeuralNet.hs:152:78-103        401       5000    0.0    0.0     0.0    0.0
+        separateFronts                 NeuralNet               NeuralNet.hs:215:1-40          396        500    0.0    0.0     0.0    0.0
+      trainEpochHelper.activeNet       NeuralNet               NeuralNet.hs:109:66-98         366        480    0.0    0.0    20.2   12.6
+       activateNet                     NeuralNet               NeuralNet.hs:170:1-42          367        480    0.0    0.0    20.2   12.6
+        activateNetHelper              NeuralNet               NeuralNet.hs:(173,1)-(175,80)  368       1440    0.0    0.0    20.2   12.6
+         activateNetHelper.z           NeuralNet               NeuralNet.hs:175:53-80         369        960    0.0    0.0    19.9   12.4
+          activateLay                  NeuralNet               NeuralNet.hs:(180,1)-(181,95)  370        960    0.0    0.0    19.9   12.4
+           activateLay.l               NeuralNet               NeuralNet.hs:181:50-95         371        960    0.0    0.0    19.9   12.4
+            activateNuesRegular        NeuralNet               NeuralNet.hs:(185,1)-(186,110) 372     123840    0.0    0.0    19.9   12.4
+             activateNue               NeuralNet               NeuralNet.hs:(190,1)-(202,89)  373     122880    0.1    0.0    19.9   12.4
+              activateNue.z            NeuralNet               NeuralNet.hs:199:60-95         374     122880    0.0    0.0    19.8   12.4
+               calculateZ              NeuralNet               NeuralNet.hs:(210,1)-(211,97)  375   56156160   19.8   12.4    19.8   12.4
+         activateLay                   NeuralNet               NeuralNet.hs:(180,1)-(181,95)  391        480    0.0    0.0     0.3    0.1
+          activateLay.l                NeuralNet               NeuralNet.hs:181:50-95         392        480    0.0    0.0     0.3    0.1
+           activateNuesRegular         NeuralNet               NeuralNet.hs:(185,1)-(186,110) 393       4800    0.0    0.0     0.3    0.1
+            activateNue                NeuralNet               NeuralNet.hs:(190,1)-(202,89)  394       4800    0.0    0.0     0.3    0.1
+             activateNue.sigVal        NeuralNet               NeuralNet.hs:193:49-74         398       4800    0.0    0.0     0.0    0.0
+             activateNue.z             NeuralNet               NeuralNet.hs:192:49-84         399       4800    0.0    0.0     0.3    0.1
+              calculateZ               NeuralNet               NeuralNet.hs:(210,1)-(211,97)  400     619200    0.3    0.1     0.3    0.1
+      trainEpochHelper.activeNet       NeuralNet               NeuralNet.hs:107:57-89         310         20    0.0    0.0     0.8    0.5
+       activateNet                     NeuralNet               NeuralNet.hs:170:1-42          311         20    0.0    0.0     0.8    0.5
+        activateNetHelper              NeuralNet               NeuralNet.hs:(173,1)-(175,80)  312         60    0.0    0.0     0.8    0.5
+         activateNetHelper.z           NeuralNet               NeuralNet.hs:175:53-80         344         40    0.0    0.0     0.8    0.5
+          activateLay                  NeuralNet               NeuralNet.hs:(180,1)-(181,95)  345         40    0.0    0.0     0.8    0.5
+           activateLay.l               NeuralNet               NeuralNet.hs:181:50-95         346         40    0.0    0.0     0.8    0.5
+            activateNuesRegular        NeuralNet               NeuralNet.hs:(185,1)-(186,110) 347       5160    0.0    0.0     0.8    0.5
+             activateNue               NeuralNet               NeuralNet.hs:(190,1)-(202,89)  348       5120    0.0    0.0     0.8    0.5
+              activateNue.z            NeuralNet               NeuralNet.hs:199:60-95         349       5120    0.0    0.0     0.8    0.5
+               calculateZ              NeuralNet               NeuralNet.hs:(210,1)-(211,97)  350    2339840    0.8    0.5     0.8    0.5
+         activateLay                   NeuralNet               NeuralNet.hs:(180,1)-(181,95)  402         20    0.0    0.0     0.0    0.0
+          activateLay.l                NeuralNet               NeuralNet.hs:181:50-95         403         20    0.0    0.0     0.0    0.0
+           activateNuesRegular         NeuralNet               NeuralNet.hs:(185,1)-(186,110) 404        220    0.0    0.0     0.0    0.0
+            activateNue                NeuralNet               NeuralNet.hs:(190,1)-(202,89)  405        200    0.0    0.0     0.0    0.0
+             activateNue.sigVal        NeuralNet               NeuralNet.hs:193:49-74         406        200    0.0    0.0     0.0    0.0
+             activateNue.z             NeuralNet               NeuralNet.hs:192:49-84         407        200    0.0    0.0     0.0    0.0
+              calculateZ               NeuralNet               NeuralNet.hs:(210,1)-(211,97)  408      25800    0.0    0.0     0.0    0.0
+     average3d                         NeuralNet               NeuralNet.hs:(242,1)-(244,38)  307         80    0.0    0.0    35.4   47.3
+      average2d                        NeuralNet               NeuralNet.hs:(248,1)-(250,38)  341       5380    0.0    0.0    35.4   47.3
+       average1d                       NeuralNet               NeuralNet.hs:(254,1)-(256,38)  353    2365906    0.7    0.7    35.3   47.3
+        average                        NeuralNet               NeuralNet.hs:259:1-75          360    2365640    1.5    0.9    22.5   24.1
+         average.(...)                 NeuralNet               NeuralNet.hs:259:17-45         362    2365640    0.0    0.0    20.9   23.3
+          averageHelper                NeuralNet               NeuralNet.hs:(262,1)-(264,53)  363   61506640   18.1   23.3    20.9   23.3
+           averageHelper.(...)         NeuralNet               NeuralNet.hs:263:28-63         365   59141000    0.7    0.0     0.7    0.0
+           averageHelper.prevLen       NeuralNet               NeuralNet.hs:263:28-63         410   59141000    1.2    0.0     1.2    0.0
+           averageHelper.prevSum       NeuralNet               NeuralNet.hs:263:28-63         364   59141000    0.9    0.0     0.9    0.0
+         average.lLen                  NeuralNet               NeuralNet.hs:259:17-45         409    2365640    0.0    0.0     0.0    0.0
+         average.lSum                  NeuralNet               NeuralNet.hs:259:17-45         361    2365640    0.0    0.0     0.0    0.0
+        average1d.z                    NeuralNet               NeuralNet.hs:256:19-38         357    2365640    0.2    0.4    12.1   22.4
+         separateFronts                NeuralNet               NeuralNet.hs:215:1-40          358    2365640   11.9   22.0    11.9   22.0
+       average2d.z                     NeuralNet               NeuralNet.hs:250:19-38         354       5320    0.0    0.0     0.1    0.1
+        separateFronts                 NeuralNet               NeuralNet.hs:215:1-40          355       5320    0.1    0.0     0.1    0.0
+      average3d.z                      NeuralNet               NeuralNet.hs:244:19-38         333         60    0.0    0.0     0.0    0.0
+       separateFronts                  NeuralNet               NeuralNet.hs:215:1-40          334         60    0.0    0.0     0.0    0.0
+     updateLay                         NeuralNet               NeuralNet.hs:95:1-93           336         60    0.0    0.0     1.7    0.8
+      updateNeu                        NeuralNet               NeuralNet.hs:(98,1)-(99,131)   351       5320    0.0    0.0     1.7    0.8
+       updateNeu.attributes            NeuralNet               NeuralNet.hs:99:60-131         352       5320    0.7    0.5     1.7    0.8
+        updateAttribute                NeuralNet               NeuralNet.hs:102:1-81          359    2365640    1.0    0.3     1.0    0.3
+     mapReverse                        NeuralNet               NeuralNet.hs:(299,1)-(300,51)  331         20    0.0    0.0     0.0    0.0
+      mapReverseHelper                 NeuralNet               NeuralNet.hs:(303,1)-(304,66)  332         60    0.0    0.0     0.0    0.0
+       getLayerWeights                 NeuralNet               NeuralNet.hs:29:1-52           380         40    0.0    0.0     0.0    0.0
+        getNeuronWeights               NeuralNet               NeuralNet.hs:19:1-35           386       2760    0.0    0.0     0.0    0.0
+   train.splitInputs                   NeuralNet               NeuralNet.hs:77:54-90          298          1    0.0    0.0     0.0    0.0
+    splitInto                          NeuralNet               NeuralNet.hs:276:1-60          299          1    0.0    0.0     0.0    0.0
+     splitIntoHelper                   NeuralNet               NeuralNet.hs:(279,1)-(281,101) 300        525    0.0    0.0     0.0    0.0
+     blankList                         NeuralNet               NeuralNet.hs:(285,1)-(286,34)  301         21    0.0    0.0     0.0    0.0
+   train.splitOutputs                  NeuralNet               NeuralNet.hs:78:54-92          302          1    0.0    0.0     0.0    0.0
+    splitInto                          NeuralNet               NeuralNet.hs:276:1-60          303          1    0.0    0.0     0.0    0.0
+     splitIntoHelper                   NeuralNet               NeuralNet.hs:(279,1)-(281,101) 304        525    0.0    0.0     0.0    0.0
+     blankList                         NeuralNet               NeuralNet.hs:(285,1)-(286,34)  305         21    0.0    0.0     0.0    0.0
+  readListPrec                         NeuralNet               NeuralNet.hs:27:54-57          315          0    0.0    0.0     2.9    3.0
+   readPrec                            NeuralNet               NeuralNet.hs:27:54-57          318          0    0.0    0.0     2.9    3.0
+    readPrec                           NeuralNet               NeuralNet.hs:23:82-85          320          0    0.0    0.0     2.9    3.0
+     readListPrec                      NeuralNet               NeuralNet.hs:17:62-65          324          0    0.0    0.0     2.9    3.0
+      readPrec                         NeuralNet               NeuralNet.hs:17:62-65          327          0    0.0    0.0     2.9    3.0
+       readPrec                        NeuralNet               NeuralNet.hs:8:87-90           329          0    2.9    3.0     2.9    3.0
+  showList                             NeuralNet               NeuralNet.hs:27:48-51          295          0    0.0    0.0     1.9    2.3
+   showsPrec                           NeuralNet               NeuralNet.hs:27:48-51          335          3    0.0    0.0     1.9    2.3
+    showsPrec                          NeuralNet               NeuralNet.hs:23:76-79          337          3    0.0    0.0     0.0    0.0
+    showList                           NeuralNet               NeuralNet.hs:17:56-59          340          0    0.0    0.0     1.9    2.3
+     showsPrec                         NeuralNet               NeuralNet.hs:17:56-59          414        266    1.9    2.3     1.9    2.3
+      showsPrec                        NeuralNet               NeuralNet.hs:8:81-84           415        266    0.0    0.0     0.0    0.0

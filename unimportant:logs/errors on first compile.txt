@@ -1,0 +1,9 @@
+11 errors
+
+misspelled a variable, (10 left)
+misspelled a variable, (9 left)
+misspelled a variable, (8 left)
+forgot the output term in type declaration and used a value as a list where I should have consed that value to an empty list, (5 left)
+put an value instead of an array of values at one point in type declaration, (2 left)
+misspelled a function, (1 left)
+misspelled a function - done
